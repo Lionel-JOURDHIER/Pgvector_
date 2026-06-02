@@ -1051,8 +1051,11 @@ Vous pouvez également explorer d'autres modèles disponibles sur Hugging Face a
 ### Questions
 
 * Quelle est la dimension produite par le modèle ?
+***384***
 * Tous les produits possèdent-ils un vecteur de même taille ?
+***oui***
 * Pourquoi est-il important que tous les embeddings aient la même dimension ?
+***pour comparer les vecteur ils doivent faire la même dimension***
 
 ---
 
@@ -1078,6 +1081,7 @@ Pour chaque requête :
 * Les résultats correspondent-ils à vos attentes ?
 * Le modèle a-t-il correctement compris l'intention de la requête ?
 * Certains résultats vous semblent-ils surprenants ?
+***Pantalon de costume ajusté 66.5% pour êtements pour partir à la montagne*** 
 
 ---
 
@@ -1152,9 +1156,13 @@ Utilisez ce score pour trier les résultats.
 Répondez aux questions suivantes :
 
 1. Quelle différence observez-vous entre une recherche par mots-clés et une recherche par embeddings ?
+***Dans la recherche par embedding, on n'a pas besoin de mot clé le sens suffis***
 2. Quels avantages apporte la recherche sémantique ?
+***Recherche rapide et plus précise, car on utilise le vocabulaire de l'utilisateur pour identifier les produits qu'il recherche***
 3. Quelles limites avez-vous identifiées lors de vos expérimentations ?
+***Incohérence de calcul***
 4. Le modèle comprend-il toujours correctement l'intention de l'utilisateur ?
+***Pas forcement, le modèle interprete l'intention***
 5. Dans quels cas les résultats vous ont-ils surpris ?
 
 ---
@@ -1169,9 +1177,13 @@ Imaginez maintenant que votre catalogue contient :
 Réfléchissez aux questions suivantes :
 
 1. Pourquoi comparer chaque produit avec tous les autres devient-il rapidement coûteux ?
+***trop de calcul à faire***
 2. Quel rôle joue une base vectorielle comme PostgreSQL avec pgvector ?
+***améliore la réaidité de recherche sémentique***
 3. Pourquoi utilise-t-on des index spécialisés comme HNSW ?
+***pour limiter le nombre de calcul aux éléments les plus proches***
 4. Quels seraient les avantages d'effectuer les recherches directement dans PostgreSQL plutôt que dans une simple liste Python ?
+***C'est plus rapide***
 
 ### Objectif
 
