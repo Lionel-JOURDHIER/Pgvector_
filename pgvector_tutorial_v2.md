@@ -570,12 +570,14 @@ WITH (lists = 50);
 ```
 
 Quel est le plus rapide ? Lequel prend plus de place ?
+***sur des petites quantité de ligne (< 10 000), ils sont equivalants en vitesst au dela de 10 000 lignes IVFFlat est plus rapide mais prend plus de place.***
 ```sql
 SELECT pg_size_pretty(pg_indexes_size('bench'));
 ```
 
 **Partie B** — À partir de combien de lignes l'index HNSW devient-il clairement avantageux ?
-Testez avec 500, 1000, 5000 lignes. Tracez (ou affichez) les temps.
+Testez avec 500, 1000, 5000 lignes. Tracez (ou affichez) les temps. 
+***à partir de 2000 ligne le HNSW est plus rapide***
 
 ---
 
